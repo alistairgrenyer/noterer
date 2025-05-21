@@ -1,0 +1,31 @@
+# Noterer Application Configuration
+
+# Backend API settings
+api:
+  host: "127.0.0.1"
+  port: 8000
+  enable_cors: true
+  debug: true
+
+# Database settings
+database:
+  uri: "neo4j://localhost:7687"
+  username: "neo4j"
+  password: "password"  # Should be overridden by environment variable in production
+
+# AI settings
+ai:
+  default_model: "gpt-4o"
+  api_key_env: "OPENAI_API_KEY"  # Name of environment variable containing API key
+  max_tokens: 1000
+  temperature: 0.7
+
+# Frontend settings
+frontend:
+  theme: "dark"  # Options: light, dark, system
+  autosave_interval: 30  # Seconds, 0 to disable
+
+# Logging settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/noterer.log"
